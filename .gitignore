@@ -60,3 +60,6 @@ unrealProject/Intermediate/*
 
 # Cache files for the editor to use
 unrealProject/DerivedDataCache/*
+
+unrealProject/Content/StarterContent/Architecture/*
+
