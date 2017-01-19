@@ -55,19 +55,23 @@ void ABubble::BeginPlay()
 	CollisionComp->BodyInstance.SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics, true);
 
 
+	//MoveX = 1190.0;
+	//MoveY = 800.0;
+	//MoveZ = 352.0;
+
 	MoveX = 1190.0;
-	MoveY = 800.0;
+	MoveY = 1000.0;
 	MoveZ = 352.0;
 
 	FVector mover(MoveX, MoveY, MoveZ);
 	this->SetActorLocation(mover, true);
-	//savepoint = this->GetActorLocation();
+	savepoint = this->GetActorLocation();
 
 
 
-	//MoveX = savepoint.X;
-	//MoveY = savepoint.Y;
-	//MoveZ = savepoint.Z;
+	MoveX = savepoint.X;
+	MoveY = savepoint.Y;
+	MoveZ = savepoint.Z;
 	
 }
 
@@ -75,6 +79,12 @@ void ABubble::BeginPlay()
 void ABubble::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
+
+	savepoint = this->GetActorLocation();
+
+	MoveX = savepoint.X;
+	MoveY = savepoint.Y;
+	MoveZ = savepoint.Z;
 
 	if (Scale <= 1.5)
 	{
@@ -92,7 +102,10 @@ void ABubble::Tick( float DeltaTime )
 	}
 	else 
 	{
-		MoveZ += 100.0f * DeltaTime;
+		
+		//MoveZ += 100.0f * DeltaTime;
+		MoveZ += 0.8;
+		UE_LOG(LogTemp, Warning, TEXT("X %f"), this->MoveZ);
 		FVector mover(MoveX, MoveY, MoveZ);
 		this->SetActorLocation(mover, true);
 	}
@@ -120,10 +133,21 @@ void ABubble::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrim
 			Destroy();
 		}*/
 		//ABubble::StaticClass()->GetDefaultObject();
-		GetWorld()->SpawnActor(ABubble::StaticClass());
-		//GetWorld()->SpawnActor<ABubble>(SpawnLocation, FireRotation);
-		Destroy();
 		
+		//GetWorld()->SpawnActor<ABubble>(SpawnLocation, FireRotation);
+
+		//GetWorld()->SpawnActor(ABubble::StaticClass());
+		//Destroy();
+		
+		//FVector moveAct(MoveX, MoveY, MoveZ+3);
+		//OtherActor->SetActorLocation(moveAct, true);
+
+		//OtherActor->SkeletalMeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+		//OtherActor->AttachRootComponentTo(CollisionComp);
+
+		GetName();
+
+
 	}
 
 }
