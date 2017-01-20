@@ -9,6 +9,7 @@
 
 // Sets default values
 ABellFlowerFall::ABellFlowerFall(const FObjectInitializer& ObjectInitializer)
+	:Super(ObjectInitializer)
 {
 
 	CollisionComp = ObjectInitializer.CreateDefaultSubobject<UBoxComponent>(this, TEXT("ColComp"));
