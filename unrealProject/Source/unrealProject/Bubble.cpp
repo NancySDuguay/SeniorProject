@@ -105,7 +105,7 @@ void ABubble::Tick( float DeltaTime )
 		
 		//MoveZ += 100.0f * DeltaTime;
 		MoveZ += 0.8;
-		UE_LOG(LogTemp, Warning, TEXT("X %f"), this->MoveZ);
+		//UE_LOG(LogTemp, Warning, TEXT("X %f"), this->MoveZ);
 		FVector mover(MoveX, MoveY, MoveZ);
 		this->SetActorLocation(mover, true);
 	}
@@ -126,6 +126,7 @@ void ABubble::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrim
 	//Destroy();
 	if (OtherActor->IsA(AunrealProjectCharacter::StaticClass()))
 	{
+		//World->SpawnActor<
 		/*health--;
 
 		if (health <= 0)
@@ -135,7 +136,7 @@ void ABubble::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrim
 		//ABubble::StaticClass()->GetDefaultObject();
 		
 		//GetWorld()->SpawnActor<ABubble>(SpawnLocation, FireRotation);
-
+		
 		//GetWorld()->SpawnActor(ABubble::StaticClass());
 		//Destroy();
 		
@@ -145,9 +146,18 @@ void ABubble::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrim
 		//OtherActor->SkeletalMeshComponent->SetCollisionEnabled(ECollisionEnabled::NoCollision);
 		//OtherActor->AttachRootComponentTo(CollisionComp);
 
-		GetName();
+		//FString please = OtherActor->GetName();
 
+		//OtherActor->GetClass()->GetName();
+		OtherActor->GetName();
+		UE_LOG(LogTemp, Warning, TEXT("NAME %s"), *OtherActor->GetClass()->GetName());
+		//UE_LOG(LogTemp, Warning, TEXT("NAME %s"), please);
 
+		if (OtherActor->GetClass()->GetName() == "SideScrollerCharacter2_C")
+		{
+			Destroy();
+			UE_LOG(LogTemp, Warning, TEXT("YAAAAAAS"))
+		}
 	}
 
 }

@@ -30,13 +30,13 @@ void ALogPush::BeginPlay()
 {
 	Super::BeginPlay();
 
-	CollisionComp->BodyInstance.SetCollisionProfileName("enemy");
+	/*CollisionComp->BodyInstance.SetCollisionProfileName("enemy");
 
 	CollisionComp->SetCollisionObjectType(COLLISION_ENEMY);
 	CollisionComp->SetCollisionResponseToAllChannels(ECollisionResponse::ECR_Block);
 	CollisionComp->SetCollisionResponseToChannel(COLLISION_ENEMY, ECollisionResponse::ECR_Ignore);
 	CollisionComp->SetCollisionResponseToChannel(COLLISION_ALLIE, ECollisionResponse::ECR_Block);
-	CollisionComp->BodyInstance.SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics, true);
+	CollisionComp->BodyInstance.SetCollisionEnabled(ECollisionEnabled::QueryAndPhysics, true);*/
 
 
 	//MoveX = 1190.0;
@@ -45,7 +45,10 @@ void ALogPush::BeginPlay()
 
 	//FVector mover(MoveX, MoveY, MoveZ);
 	//this->SetActorLocation(mover, true);
-	savepoint = this->GetActorLocation();
+	
+	
+	
+	/*savepoint = this->GetActorLocation();
 
 	isPush = false;
 
@@ -53,7 +56,7 @@ void ALogPush::BeginPlay()
 	MoveY = savepoint.Y;
 	MoveZ = savepoint.Z;
 
-	rotSpeed = 200.0f;
+	rotSpeed = 200.0f;*/
 	
 }
 
@@ -68,8 +71,16 @@ void ALogPush::Tick( float DeltaTime )
 		//FVector mover(MoveX, MoveY, MoveZ);
 		//this->SetActorLocation(mover, true);
 
-		RotRoll += rotSpeed * DeltaTime;
-		FRotator rotate(RotPitch, RotYaw, RotRoll);
+
+
+		/*RotRoll += rotSpeed * DeltaTime;
+		FRotator rotate(RotPitch, RotYaw, RotRoll);*/
+
+
+
+
+
+
 		//CollisionComp->SetRelativeRotation(rotate, true);
 	}
 
@@ -100,7 +111,10 @@ void ALogPush::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPri
 
 		//GetWorld()->SpawnActor(ABubble::StaticClass());
 		//Destroy();
-		isPush = true;
+
+
+
+		//isPush = true;
 
 	}
 }
