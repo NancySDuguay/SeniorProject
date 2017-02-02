@@ -1,0 +1,26 @@
+﻿Revert "Changed everything"
+
+This reverts commit fedcd9743a1accf96f6883e59cbac34309abf84b.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# Committer: NancySDuguay <NancyDuguay@cunet.carleton.ca>
+#
+# On branch corey-branch
+# Your branch is up-to-date with 'origin/corey-branch'.
+#
+# Changes to be committed:
+#	deleted:    unrealProject/Content/Blueprints/BoulderB.uasset
+#	deleted:    unrealProject/Content/Blueprints/StartWater_Blueprint.uasset
+#	deleted:    unrealProject/Content/Blueprints/cutBoulderB.uasset
+#	deleted:    unrealProject/Content/Cube8_Blueprint.uasset
+#	deleted:    unrealProject/Content/Models/Boulder2/Boulder.uasset
+#	deleted:    unrealProject/Content/Models/Boulder2/BoulderText.uasset
+#	deleted:    unrealProject/Content/Models/Boulder2/lambert4.uasset
+#	modified:   unrealProject/Content/SideScrollerCPP/Blueprints/SideScrollerCharacter.uasset
+#	modified:   unrealProject/Content/SideScrollerCPP/Blueprints/SideScrollerCharacter2.uasset
+#	modified:   unrealProject/Content/SideScrollerCPP/Maps/FlowerUpLevel.umap
+#	modified:   unrealProject/Source/unrealProject/FlowerGrow.cpp
+#
+
