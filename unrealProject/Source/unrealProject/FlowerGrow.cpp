@@ -61,7 +61,7 @@ void AFlowerGrow::Tick( float DeltaTime )
 
 void AFlowerGrow::OnHit(UPrimitiveComponent* HitComponent, AActor* OtherActor, UPrimitiveComponent* OtherComp, FVector NormalImpulse, const FHitResult& Hit)
 {
-	//UE_LOG(LogTemp, Warning, TEXT("X %f"), this->MoveX);
+	UE_LOG(LogTemp, Warning, TEXT("X %f"), this->MoveX);
 	//UE_LOG(LogTemp, Warning, TEXT("X %f"), this->Scale);
 	//Destroy();
 	/*if (OtherActor->IsA(AunrealProjectCharacter::StaticClass()))
