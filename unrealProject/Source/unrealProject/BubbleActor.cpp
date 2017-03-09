@@ -89,15 +89,19 @@ void ABubbleActor::Tick( float DeltaTime )
 	{
 
 		//MoveZ += 100.0f * DeltaTime;
-		MoveZ += 0.8;
+		MoveZ += 2;
 		//UE_LOG(LogTemp, Warning, TEXT("X %f"), this->MoveZ);
 		FVector mover(MoveX, MoveY, MoveZ);
 		this->SetActorLocation(mover, true);
 
-		if ((MoveZ > 1000) && (MoveZ < 1001))
+		if ((MoveZ > 11630) && (MoveZ <= 11632))
 		{
 			//GetWorld()->SpawnActor(ABubbleActor::StaticClass());
 			GetWorld()->SpawnActor<ABubbleActor>(GetClass(), startLoc, FRotator::ZeroRotator);
+		}
+		else if (MoveZ > 12010)
+		{
+			Destroy();
 		}
 	}
 
