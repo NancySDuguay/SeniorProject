@@ -91,7 +91,7 @@ void ABubbleActor::Tick( float DeltaTime )
 
 		//MoveZ += 100.0f * DeltaTime;
 		MoveZ += 1.5;
-		UE_LOG(LogTemp, Warning, TEXT("X %f"), this->MoveZ);
+		//UE_LOG(LogTemp, Warning, TEXT("X %f"), this->MoveZ);
 		FVector mover(MoveX, MoveY, MoveZ);
 		this->SetActorLocation(mover, true);
 
