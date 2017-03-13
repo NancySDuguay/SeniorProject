@@ -22,6 +22,7 @@ class UNREALPROJECT_API ABubbleActor : public AActor
 	float RotRoll;
 
 	float Scale;
+	bool chek;
 
 	FVector savepoint;
 	FVector mover;
