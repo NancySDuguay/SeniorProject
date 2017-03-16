@@ -57,6 +57,7 @@ void ABellFlowerFallActor::BeginPlay()
 	MoveZ = savepoint.Z;
 
 	rotSpeed = 100.0f;
+	scaleCtr = 0;
 	
 }
 
@@ -64,6 +65,14 @@ void ABellFlowerFallActor::BeginPlay()
 void ABellFlowerFallActor::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
+	scale = this->GetActorScale3D();
+	UE_LOG(LogTemp, Warning, TEXT("X %s"), this->GetActorScale3D().ToString();
+
+	if (scale.x < 1.5)
+	{
+
+	}
+
 
 	if (isFall == true)
 	{
