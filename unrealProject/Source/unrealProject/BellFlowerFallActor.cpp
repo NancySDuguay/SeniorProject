@@ -66,12 +66,12 @@ void ABellFlowerFallActor::Tick( float DeltaTime )
 {
 	Super::Tick( DeltaTime );
 	scale = this->GetActorScale3D();
-	UE_LOG(LogTemp, Warning, TEXT("X %s"), this->GetActorScale3D().ToString();
+	//UE_LOG(LogTemp, Warning, TEXT("X %s"), this->GetActorScale3D().ToString());
 
-	if (scale.x < 1.5)
+	/*if (scale.x < 1.5)
 	{
 
-	}
+	}*/
 
 
 	if (isFall == true)
