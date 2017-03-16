@@ -29,6 +29,8 @@ class UNREALPROJECT_API ABellFlowerFallActor : public AActor
 
 	FVector savepoint;
 	FVector mover;
+	FVector scale;
+	int scaleCtr;
 	
 public:	
 
